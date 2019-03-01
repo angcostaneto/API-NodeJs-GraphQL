@@ -15,7 +15,8 @@ class App {
     // Essa tipagem é do typescript.
     private middleware(): void {
         this.express.use('/graphql', graphqlHttp({
-            schema: schema
+            schema: schema,
+            graphiql: process.env.NODE_ENV === 'development'
         }));
     }
 
