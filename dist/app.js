@@ -1,1 +1,18 @@
-console.log("Hello World");
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express = require("express");
+const graphqlHttp = require("express-graphql");
+const schema_1 = require("./graphql/schema");
+class App {
+    constructor() {
+        this.express = express();
+        this.middleware();
+    }
+    // Essa tipagem é do typescript.
+    middleware() {
+        this.express.use('/graphql', graphqlHttp({
+            schema: schema_1.default
+        }));
+    }
+}
+exports.default = new App().express;
