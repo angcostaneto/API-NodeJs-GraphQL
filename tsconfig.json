@@ -1,8 +1,11 @@
 {
     "compilerOptions": {
+        "lib": [
+            "esnext"
+        ],
         "target": "es6", // Define como será o padrão modulo que iremos escrever como es6
         "module": "commonjs", // Quando compilado ele irá tornar o modulo como javascript comum
-        "outDir": "dist" // Quando compilado salva os arquivos no diretório dist
+        //"outDir": "dist" // Quando compilado salva os arquivos no diretório dist
     },
     "compileOnSave": false,
     "include": [
