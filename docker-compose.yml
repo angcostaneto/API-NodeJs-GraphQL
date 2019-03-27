@@ -10,8 +10,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: node_api
-    volumes:
-      - mysql-data:/var/lib/mysql
 
   app:
     image: node:alpine
